@@ -1,15 +1,47 @@
 <template>
   <div id="app">
-    asd
+    <preview />
+    <hobbies
+      title="О себе"
+      subtitle="Хобби"
+      :isMyHobbies="true"
+      :items="myHobbies"
+    />
+    <hobbies
+      title="Интересы друга"
+      subtitle="Хобби"
+      :isMyHobbies="false"
+      :items="friendHobbies"
+    />
   </div>
 </template>
 
-<script>
-export default {
-  name: 'App',
-  components: {
-  }
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+import { mapGetters } from 'vuex';
+import Hobbies from './components/Hobbies/Hobbies.vue';
+import Preview from './components/Preview/Preview.vue';
+
+@Component({
+  components: { Hobbies, Preview },
+  computed: {
+    ...mapGetters(['myHobbies', 'friendHobbies']),
+  },
+})
+export default class App extends Vue {
+  public myHobbies!: string[]
+
+  public friendHobbies!: string[]
 }
 </script>
 
-<style lang="scss" src="./App.scss" />
+<style lang="scss">
+#app {
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 10px;
+}
+</style>

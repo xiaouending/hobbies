@@ -1,0 +1,40 @@
+.action {
+  display: flex;
+  padding: 5px;
+  align-items: center;
+
+  &__icon {
+    width: 10px;
+    height: 10px;
+
+    &[type=add] {
+      background: url('../../assets/icons/add.gif') no-repeat;
+      background-size: cover;
+    }
+
+    &[type=close] {
+      background: url('../../assets/icons/close.png') no-repeat;
+      background-size: cover;
+    }
+
+    &[type=warn] {
+      background: url('../../assets/icons/warn.png') no-repeat;
+      background-size: cover;
+    }
+
+    &[type=ok] {
+      background: url('../../assets/icons/ok.png') no-repeat;
+      background-size: cover;
+    }
+  }
+  
+  &__text {
+    color: grey;
+    margin-left: 5px;
+    font-size: 10px;
+  }
+
+  &.clickable {
+    cursor: pointer;
+  }
+}

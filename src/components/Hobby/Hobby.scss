@@ -1,0 +1,54 @@
+.hobby {
+  margin: 5px 0;
+  width: 100%;
+  padding-right: 5px;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    .hobby__action-wrapper.show-on-hover {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &:after {
+    content: '';
+    width: 10px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    box-shadow: -11px 4px 8px 0px white inset;
+  }
+
+  &__text {
+    margin-left: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+  }
+
+  &__action-wrapper {
+    background: white;
+    padding: 5px;
+
+    &.wrapper--right {
+      box-shadow: -11px 4px 8px 0px white;
+      flex: none;
+    }
+
+    &.attached {
+      position: absolute;
+      right: 0px;
+    }
+
+    &.show-on-hover {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .15s ease-in;
+    }
+  }
+}

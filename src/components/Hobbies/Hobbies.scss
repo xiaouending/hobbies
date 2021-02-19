@@ -1,0 +1,52 @@
+.hobbies {
+  max-width: 500px;
+  padding: 10px;
+  border: 2px solid orange;
+  border-radius: 2px;
+  text-align: left;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__input {
+    padding: 10px;
+    outline: none;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    background: transparent;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__divider {
+    border: .5px solid black;
+  }
+
+  &__subtitle {
+    position: relative;
+
+    &:after {
+      content: '';
+      margin-left: 30px;
+      color: black;
+      font-size: 20px;
+    }
+  }
+
+  &__more-btn {
+    border: 0;
+    outline: 0;
+    text-decoration: underline;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    color: orange
+  }
+}
