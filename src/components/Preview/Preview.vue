@@ -1,7 +1,7 @@
 <template>
   <div class="preview">
     <img class="preview__logo"
-          src="https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg"
+          src="../../assets/logo.png"
           alt="Vue logo">
     <h1 class="preview__title">Hobbies app</h1>
   </div>
