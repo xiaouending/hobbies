@@ -18,7 +18,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import { mapGetters } from 'vuex';
+import { mapActions, mapGetters } from 'vuex';
 import Hobbies from './components/Hobbies/Hobbies.vue';
 import Preview from './components/Preview/Preview.vue';
 
@@ -27,11 +27,20 @@ import Preview from './components/Preview/Preview.vue';
   computed: {
     ...mapGetters(['myHobbies', 'friendHobbies']),
   },
+  methods: {
+    ...mapActions(['initializeState']),
+  },
 })
 export default class App extends Vue {
   public myHobbies!: string[]
 
   public friendHobbies!: string[]
+
+  private initializeState!: () => void
+
+  created() {
+    this.initializeState();
+  }
 }
 </script>
 
