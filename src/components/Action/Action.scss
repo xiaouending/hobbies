@@ -3,33 +3,49 @@
   padding: 5px;
   align-items: center;
 
-  &__icon {
-    width: 10px;
-    height: 10px;
-
-    &[type=add] {
+  &[type=add] {
+    & > .action__icon {
       background: url('../../assets/icons/add.gif') no-repeat;
       background-size: cover;
     }
+  }
 
-    &[type=close] {
+  &[type=close] {
+    & > .action__icon {
       background: url('../../assets/icons/close.png') no-repeat;
       background-size: cover;
     }
+  }
 
-    &[type=warn] {
+  &[type=warn] {
+    & > .action__icon {
       background: url('../../assets/icons/warn.png') no-repeat;
       background-size: cover;
     }
 
-    &[type=ok] {
+    & > .action__text {
+      color: grey;
+    }
+  }
+
+  &[type=ok] {
+    & > .action__icon {
       background: url('../../assets/icons/ok.png') no-repeat;
       background-size: cover;
     }
+
+    & > .action__text {
+      color: green;
+    }
+  }
+
+  &__icon {
+    width: 10px;
+    height: 10px;
   }
   
   &__text {
-    color: grey;
+    color: black;
     margin-left: 5px;
     font-size: 10px;
   }

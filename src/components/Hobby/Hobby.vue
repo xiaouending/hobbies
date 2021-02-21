@@ -3,13 +3,13 @@
     <div class="hobby__action-wrapper wrapper--left show-on-hover">
       <action
         v-if="isMyHobby"
-        icon="close"
+        type="close"
         :isClickable="true"
         @click="removeHobbyFromMyHobbies(item)"
       />
       <action
         v-else
-        icon="add"
+        type="add"
         :isClickable="true"
         @click="addHobbyToMyHobbies(item)"
       />
@@ -18,7 +18,7 @@
     <div v-if="!isMyHobby"
           class="hobby__action-wrapper wrapper--right attached show-on-hover">
       <action
-        icon="warn"
+        type="warn"
         text="пожаловаться"
         :isClickable="true"
         @click="complainForHobby(item)"
@@ -27,7 +27,7 @@
     <div v-if="isMyHobby && item.isAdded"
           class="hobby__action-wrapper wrapper--right">
       <action
-        icon="ok"
+        type="ok"
         text="добавлено в ваши увлечения"
       />
     </div>

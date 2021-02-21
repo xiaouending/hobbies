@@ -1,4 +1,4 @@
-export enum ActionIconTypes {
+export enum ActionTypes {
   ok = 'ok',
   add = 'add',
   warn = 'warn',
