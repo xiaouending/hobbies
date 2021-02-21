@@ -28,6 +28,7 @@
 import { Component, Vue, Prop } from 'vue-property-decorator';
 import { mapActions } from 'vuex';
 import Hobby from '../Hobby/Hobby.vue';
+import { Hobby as IHobby } from '../../types/types';
 
 @Component({
   components: { Hobby },
@@ -42,7 +43,7 @@ export default class Hobbies extends Vue {
 
   @Prop({ default: false }) isMyHobbies!: boolean
 
-  @Prop({ required: true }) items!: Hobby[]
+  @Prop({ required: true }) items!: IHobby[]
 
   private shortListItemsCount = 2;
 
@@ -54,8 +55,11 @@ export default class Hobbies extends Vue {
 
   public submitForm($event: Event): void {
     $event.preventDefault();
-    this.addNewHobby(this.inputValue);
-    this.inputValue = '';
+
+    if (this.inputValue) {
+      this.addNewHobby(this.inputValue);
+      this.inputValue = '';
+    }
   }
 
   get itemsShortList() {
