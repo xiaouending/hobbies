@@ -83,10 +83,10 @@ export default new Vuex.Store({
     initializeState({ commit }): void {
       const storageState = localStorage.getItem('hobbiesState');
 
-      if (!storageState) {
-        commit('saveState');
-      } else {
+      if (storageState) {
         commit('setState', JSON.parse(storageState));
+      } else {
+        commit('saveState');
       }
     },
   },
