@@ -1,24 +1,11 @@
-# hobbies
+## Preview
+![](https://i.imgur.com/k9V5eLw.png)
 
-## Project setup
-```
-yarn install
-```
+## Start
 
-### Compiles and hot-reloads for development
 ```
-yarn serve
+yarn
+yarn run serve
+yarn run build
+yarn run lint
 ```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
