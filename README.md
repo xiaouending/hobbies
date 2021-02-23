@@ -1,5 +1,5 @@
 ## Preview
-![](https://i.imgur.com/k9V5eLw.png)
+![](https://i.imgur.com/Gqv30lQ.png)
 
 ## Start
 
